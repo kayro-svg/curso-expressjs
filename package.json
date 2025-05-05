@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "dev": "node --watch app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Kayro",
-  "license": "ISC",
+  "license": "MIT",
   "description": "curso express.js",
   "dependencies": {
+    "dotenv": "^16.5.0",
     "express": "^5.1.0"
-  },
-  "devDependencies": {}
+  }
 }

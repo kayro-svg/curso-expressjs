@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 
@@ -13,6 +14,6 @@ app.get('/', (req, res) => {
 );
 
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}, aplicacion funconando`);
+    console.log(`Server is running on http://localhost:${PORT}, aplicacion funcionando`);
 }
 );
