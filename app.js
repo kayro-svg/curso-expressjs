@@ -9,6 +9,7 @@ const errorHandler = require('./src/middlewares/errorHandler');
 const { validateUser } = require('./src/utils/validation');
 const authenticateToken = require('./src/middlewares/auth');
 const bodyParser = require('body-parser');
+const routes = require('./src/routes');
 
 const fs = require('fs');
 const path = require('path');
@@ -19,6 +20,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(LoggerMiddleware);
 app.use(errorHandler);
+
+// Mount the API routes
+app.use('/api', routes);
 
 const PORT = process.env.PORT || 3000;
 
